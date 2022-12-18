@@ -4,3 +4,31 @@
 // Но в конце будут разные расширения: example.woff, example.woff2, example.eot
 // Ещё один пример: @include font-face("saira", "/fonts/saira/saira", 400); то есть в папке saira
 // лежат файлы saira.woff2, saira.eot и так далее, хватит хотя бы одного расширения и проект будет работать
+
+@include font-face("nico moji", "../fonts/nicoMoji/NicoMoji-Regular", 400);
+
+@font-face {
+  font-family: "next art";
+  font-weight: 400;
+  font-style: normal;
+  src: local("next art"), url("../fonts/nextArt/NEXTART_Regular.otf") format("opentype");
+}
+@font-face {
+  font-family: "next art";
+  font-weight: 600;
+  font-style: normal;
+  src: local("next art"), url("../fonts/nextArt/NEXTART_SemiBold.otf") format("opentype");
+}
+@font-face {
+  font-family: "next art";
+  font-weight: 700;
+  font-style: normal;
+  src: local("next art"), url("../fonts/nextArt/NEXTART_Bold.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "arodora pro";
+  font-weight: 300;
+  font-style: normal;
+  src: local("arodora pro"), url("../fonts/arodora/ArodoraPro-Light.otf") format("opentype");
+}
