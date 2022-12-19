@@ -49,6 +49,7 @@
   <meta name="format-detection" content="address=no">
 
   <!-- CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
   <link href="css/main.min.css" rel="stylesheet">
 </head>
@@ -56,7 +57,7 @@
 <body class="page">
 
   <section class="im page__im">
-    <header class="im__header header" id="home">
+    <header class="im__header header wow animate__animated animate__fadeInDown" id="home">
       <div class="container">
         <div class="header__inner">
           <a class="header__logo-wrapper" href="#">
@@ -95,22 +96,23 @@
       <div class="container">
         <div class="welcome__inner">
           <div class="welcome__contact">
-            <span class="welcome__caption">
+            <span class="welcome__caption wow animate__animated animate__fadeIn" data-wow-delay="0.4s">
               What’s up
             </span>
-            <h1 class="welcome__title">
+            <h1 class="welcome__title wow animate__animated animate__fadeIn" data-wow-delay="0.6s">
               I’m MICHAEL KRES
             </h1>
-            <p class="welcome__text">
+            <p class="welcome__text wow animate__animated animate__fadeIn" data-wow-delay=".8s">
               I've been doing web design, front-end and back-end development for a year now. Do you need a website
               design,
               site layout, or maybe a turnkey website? Then contact me
             </p>
-            <a class="welcome__btn-link" href="#">
+            <a class="welcome__btn-link wow animate__animated animate__fadeInLeft" href="#">
               Contact me
             </a>
           </div>
-          <div class="welcome__img-wrapper">
+          <div class="welcome__img-wrapper wow animate__animated animate__fadeInRight" data-wow-delay=".5s"
+            data-wow-duration="1.5s">
             <img class="welcome__img" src="images/global/image.png" alt="мой аватар">
           </div>
         </div>
@@ -120,7 +122,7 @@
 
   <section class="about page__about" id="about">
     <div class="container">
-      <ul class="about__skills-list">
+      <ul class="about__skills-list wow animate__animated animate__fadeIn">
         <li class="about__skills-item">
           <div class="about__skills-item-img-wrapper">
             <svg-to-inline class-Name="about__skills-item-img" path="images/about/1.svg"
@@ -186,14 +188,14 @@
         </li>
       </ul>
 
-      <div class="about__info-block">
+      <div class="about__info-block wow animate__animated animate__fadeInUp">
         <div class="about__info-text-wrapper">
           <div class="about__info-title-wrapper title-wrapper">
-            <h2 class="title about__info-title">
+            <h2 class="title about__info-title wow animate__animated animate__fadeIn" data-wow-delay=".8s">
               About me
             </h2>
           </div>
-          <p class="about__info-text">
+          <p class="about__info-text wow animate__animated animate__fadeIn" data-wow-delay="1s">
             Hello again everyone! So, you already know that my name is Gleb. A little about myself: student, 18 y.o.,
             athlete-football player, I love creativity since childhood, I live in Donetsk, Ukraine. Why programming?
             Everything is elementary - I like it, the profession of the future, thanks to which I can provide myself and
@@ -207,13 +209,16 @@
             contacts below.
           </p>
 
-          <div class="about__info-img-wrapper about__info-img-wrapper--1">
+          <div class="about__info-img-wrapper about__info-img-wrapper--1 wow animate__animated animate__fadeInUp"
+            data-wow-delay=".2s">
             <img class="about__info-img" src="images/about/info/1.jpg" alt="моя фотография">
           </div>
-          <div class="about__info-img-wrapper about__info-img-wrapper--2">
+          <div class="about__info-img-wrapper about__info-img-wrapper--2 wow animate__animated animate__fadeInUp"
+            data-wow-delay=".4s">
             <img class="about__info-img" src="images/about/info/2.jpg" alt="моя фотография">
           </div>
-          <div class="about__info-img-wrapper about__info-img-wrapper--3">
+          <div class="about__info-img-wrapper about__info-img-wrapper--3 wow animate__animated animate__fadeInUp"
+            data-wow-delay=".6s">
             <img class="about__info-img" src="images/about/info/3.jpg" alt="моя фотография">
           </div>
         </div>
@@ -224,11 +229,11 @@
   <section class="portfolio page__portfolio" id="portfolio">
     <!-- <div class="container"> -->
     <div class="portfolio__title-wrapper title-wrapper">
-      <h2 class="title portfolio__title">
+      <h2 class="title portfolio__title wow animate__animated animate__fadeInLeft">
         Portfolio
       </h2>
     </div>
-    <div class="swiper portfolio__slider">
+    <div class="swiper portfolio__slider wow animate__animated animate__fadeIn" data-wow-delay=".2s">
       <!-- Additional required wrapper -->
       <div class="swiper-wrapper portfolio__swiper-wrapper">
         <div class="swiper-slide portfolio__slide">
@@ -298,7 +303,6 @@
           </div>
         </div>
       </div>
-
       <div class="swiper-button-prev"></div>
       <div class="swiper-button-next"></div>
     </div>
@@ -308,7 +312,7 @@
   <footer class="footer page__footer" id="contact">
     <div class="container">
       <div class="footer__inner">
-        <div class="footer__col">
+        <div class="footer__col wow animate__animated animate__fadeIn">
           <ul class="footer__list">
             <li class="footer__item">
               <a class="footer__link" href="#home">
@@ -332,7 +336,7 @@
             </li>
           </ul>
         </div>
-        <div class="footer__col">
+        <div class="footer__col wow animate__animated animate__fadeIn" data-wow-delay=".2s">
           <ul class="footer__list">
             <li class="footer__item">
               <p class="footer__item-text">
@@ -356,7 +360,7 @@
             </li>
           </ul>
         </div>
-        <div class="footer__col">
+        <div class="footer__col wow animate__animated animate__fadeIn" data-wow-delay=".4s">
           <div class="footer__col-top">
             <div class="footer__col-logo-wrapper">
               <svg-to-inline path="images/global/logo.svg" class-Name="footer__col-logo"
@@ -387,6 +391,9 @@
 
   <!-- SCRIPTS -->
   <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"
+    integrity="sha512-Eak/29OTpb36LLo2r47IpVzPBLXnAMPAVypbSZiZ4Qkf8p/7S/XRG5xp7OKWPPYfJT6metI+IORkR5G8F900+g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script src="js/main.min.js"></script>
 </body>
 
