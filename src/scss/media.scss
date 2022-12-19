@@ -1,1 +1,152 @@
 // Здесь находятся все медиазапросы, вынесены в отдельный файл для удобства
+
+@media (min-width: 801px) {
+  .burger {
+    display: none;
+  }
+}
+
+@media (min-width: 801px) {
+  .header {
+    &__logo-wrapper {
+      &:hover {
+        transform: scale(1.04);
+        .header__logo {
+          path {
+            stroke: lighten(#00c1ec, 50%);
+          }
+        }
+      }
+    }
+    &__item-link {
+      &:hover {
+        color: #fff;
+        &::before {
+          width: 100%;
+        }
+      }
+    }
+  }
+  .welcome {
+    &__caption {
+      &:hover {
+        transform: scale(1.04);
+      }
+    }
+    &__title {
+      &:hover {
+        transform: scale(1.04);
+      }
+    }
+    &__text {
+      &:hover {
+        transform: scale(1.04);
+      }
+    }
+    &__btn-link {
+      &:hover {
+        color: #fff;
+        box-shadow: 0px 2px 13px rgba(74, 322, 225, 0.8);
+      }
+    }
+    &__img-wrapper {
+      &:hover {
+        transform: scale(1.03);
+      }
+    }
+  }
+  .about {
+    &__skills-item {
+      &:hover {
+        box-shadow: none;
+        transform: translateY(5px);
+      }
+    }
+    &__info-title {
+      &:hover {
+        &::before {
+          bottom: -5px;
+          opacity: 1;
+        }
+      }
+    }
+    &__info-img-wrapper {
+      &:hover {
+        transform: scale(1.03);
+      }
+    }
+  }
+
+  .portfolio {
+    .swiper-button-next,
+    .swiper-button-prev {
+      &:hover {
+        box-shadow: 0px 2px 13px rgba(64, 192, 195, 0.7);
+      }
+    }
+    &__title {
+      &:hover {
+        &::before {
+          bottom: -5px;
+          opacity: 1;
+        }
+      }
+    }
+    &__text-link {
+      &:hover {
+        &::before {
+          opacity: 1;
+          transform: translateY(0);
+          pointer-events: initial;
+        }
+      }
+    }
+  }
+  .footer {
+    &__link {
+      &:hover {
+        &::before {
+          width: 100%;
+        }
+      }
+    }
+    &__col-btn {
+      &:hover {
+        box-shadow: 0px 2px 13px rgba(64, 192, 195, 0.7);
+      }
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  .header {
+    &__menu {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-left: 0;
+      position: fixed;
+      top: 0;
+      left: 0;
+      background-color: rgba(#000, 0.9);
+      z-index: 1000;
+      width: 100%;
+      height: 100%;
+      transform: translateX(100%);
+      transition: transform 0.3s;
+      &._open {
+        transform: translateX(0);
+      }
+    }
+    &__list {
+      flex-direction: column;
+      gap: 30px;
+      font-size: 30px;
+    }
+    &__item-link {
+      &::before {
+        display: none;
+      }
+    }
+  }
+}

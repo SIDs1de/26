@@ -51,15 +51,9 @@ body {
   &__logo-wrapper {
     display: flex;
     align-items: center;
-    transition: transform 0.3s;
-    &:hover {
-      transform: scale(1.04);
-      .header__logo {
-        path {
-          stroke: lighten(#00c1ec, 50%);
-        }
-      }
-    }
+    transition: transform 0.4s;
+    position: relative;
+    z-index: 1001;
   }
   &__logo {
     path {
@@ -67,15 +61,16 @@ body {
     }
   }
   &__logo-text {
-    padding-left: 10px;
+    @include adaptive-value("padding-left", 10, 6, 1);
     font-family: "Nico Moji";
-    font-size: 18px;
+    @include adaptive-value("font-size", 18, 13, 1);
     line-height: 1;
   }
   &__menu {
     flex: 1 0 auto;
     margin-left: 97px;
-    padding-right: 92px;
+    @include adaptive-value("margin-left", 97, 0, 1);
+    @include adaptive-value("padding-right", 92, -160, 1);
   }
   &__nav {
     font-weight: 300;
@@ -102,12 +97,6 @@ body {
       border-radius: 2px;
       background: linear-gradient(87.32deg, #6278ec 4.47%, #29eea7 95.53%);
       transition: width 0.2s;
-    }
-    &:hover {
-      color: #fff;
-      &::before {
-        width: 100%;
-      }
     }
     &--underlined {
       position: relative;
@@ -142,9 +131,6 @@ body {
     margin-bottom: 27px;
     transition: transform 0.2s;
     display: block;
-    &:hover {
-      transform: scale(1.04);
-    }
   }
   &__title {
     font-family: "NEXT ART";
@@ -154,9 +140,6 @@ body {
     color: #e4e4e4;
     margin-bottom: 27px;
     transition: transform 0.2s;
-    &:hover {
-      transform: scale(1.04);
-    }
   }
   &__text {
     font-weight: 300;
@@ -165,9 +148,6 @@ body {
     color: #e4e4e4;
     margin-bottom: 27px;
     transition: transform 0.2s;
-    &:hover {
-      transform: scale(1.04);
-    }
   }
   &__btn-link {
     font-family: "NEXT ART";
@@ -180,18 +160,11 @@ body {
     border-radius: 6px;
     padding: 14px 40px;
     transition: all 0.2s;
-    &:hover {
-      color: #fff;
-      box-shadow: 0px 2px 13px rgba(74, 322, 225, 0.8);
-    }
   }
   &__img-wrapper {
     line-height: 0;
     transition: transform 0.6s;
     transform-origin: bottom center;
-    &:hover {
-      transform: scale(1.03);
-    }
   }
   &__img {
     line-height: 0;
@@ -227,10 +200,6 @@ body {
     padding-bottom: 50px;
     padding-top: 30px;
     transition: all 0.3s;
-    &:hover {
-      box-shadow: none;
-      transform: translateY(5px);
-    }
   }
   &__skills-item-img-wrapper {
     flex: 1 0 auto;
@@ -287,12 +256,6 @@ body {
       opacity: 0;
       transition: all 0.2s;
     }
-    &:hover {
-      &::before {
-        bottom: -5px;
-        opacity: 1;
-      }
-    }
   }
   &__info-img-wrapper {
     position: absolute;
@@ -302,9 +265,6 @@ body {
     border-radius: 14px;
     padding: 30px;
     transition: transform 0.3s;
-    &:hover {
-      transform: scale(1.03);
-    }
     &--1 {
       top: -47px;
       left: -297px;
@@ -334,6 +294,7 @@ body {
     background: linear-gradient(267.32deg, #6278ec 4.47%, #29eea7 95.53%);
     border-radius: 50%;
     cursor: pointer;
+    transition: all 0.3s;
   }
   .swiper-button-next {
     right: 350px;
@@ -376,12 +337,6 @@ body {
       background-color: rgba(#fff, 0.8);
       opacity: 0;
       transition: all 0.2s;
-    }
-    &:hover {
-      &::before {
-        bottom: -5px;
-        opacity: 1;
-      }
     }
   }
   &__slider {
@@ -458,13 +413,6 @@ body {
       transform: translateY(10px);
       pointer-events: none;
     }
-    &:hover {
-      &::before {
-        opacity: 1;
-        transform: translateY(0);
-        pointer-events: initial;
-      }
-    }
   }
 }
 
@@ -507,11 +455,6 @@ body {
       background-color: rgba(#fff, 0.6);
       transition: width 0.2s;
     }
-    &:hover {
-      &::before {
-        width: 100%;
-      }
-    }
   }
   &__item-text {
   }
@@ -543,9 +486,6 @@ body {
     line-height: 0;
     cursor: pointer;
     transition: all 0.3s;
-    &:hover {
-      box-shadow: 0px 2px 13px rgba(64, 192, 195, 0.7);
-    }
   }
   &__col-bottom {
   }
