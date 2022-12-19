@@ -1,4 +1,16 @@
 document.addEventListener('DOMContentLoaded', () => {
+  const wow = new WOW(
+    {
+      boxClass: 'wow',      // animated element css class (default is wow)
+      animateClass: 'animated', // animation css class (default is animated)
+      offset: 100,          // distance to the element when triggering the animation (default is 0)
+      mobile: true,       // trigger animations on mobile devices (default is true)
+      live: true,       // act on asynchronously loaded content (default is true)
+      scrollContainer: null,    // optional scroll container selector, otherwise use window,
+      resetAnimation: true,     // reset animation on end (default is true)
+    }
+  );
+  wow.init();
 
   const activateSliders = () => {
     const pageSlider = new Swiper('.portfolio__slider', {
@@ -26,13 +38,20 @@ document.addEventListener('DOMContentLoaded', () => {
       // при изменении дочерних
       // элементов слайда
       observeSlideChildren: true,
+      spaceBetween: 50,
+
+      breakpoints: {
+        550: {
+          spaceBetween: 0,
+        }
+      }
     });
   }
 
   const activateScrollBtns = () => {
     const burgerBtn = document.querySelector('.burger')
     const headerMenu = document.querySelector('.header__menu')
-    const body = document.querySelector('.page')
+    const body = document.querySelector('html')
 
     document.querySelectorAll('a[href^="#"').forEach(link => {
       link.addEventListener('click', function (e) {
@@ -77,7 +96,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const burger = () => {
     const burgerBtn = document.querySelector('.burger')
     const headerMenu = document.querySelector('.header__menu')
-    const body = document.querySelector('.page')
+    const body = document.querySelector('html')
 
     burgerBtn.addEventListener('click', () => {
       window.scrollTo({

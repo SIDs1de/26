@@ -1,5 +1,128 @@
 // Здесь находятся все медиазапросы, вынесены в отдельный файл для удобства
 
+@media (min-width: 2799px) {
+  .portfolio {
+    .swiper-button-next {
+      right: 40%;
+    }
+    .swiper-button-prev {
+      left: 40%;
+    }
+  }
+}
+
+@media (min-width: 2399px) {
+  .portfolio {
+    .swiper-button-next {
+      right: 30%;
+    }
+    .swiper-button-prev {
+      left: 30%;
+    }
+  }
+}
+
+@media (min-width: 2021px) {
+  .portfolio {
+    .swiper-button-next {
+      right: 25%;
+    }
+    .swiper-button-prev {
+      left: 25%;
+    }
+  }
+}
+@media (min-width: 1921px) {
+  .portfolio {
+    .swiper-button-next {
+      right: 22%;
+    }
+    .swiper-button-prev {
+      left: 22%;
+    }
+  }
+}
+
+@media (max-width: 1660px) {
+  .portfolio {
+    .swiper-button-next {
+      right: 8%;
+    }
+    .swiper-button-prev {
+      left: 8%;
+    }
+  }
+}
+
+@media (max-width: 1400px) {
+  .portfolio {
+    .swiper-button-next {
+      right: 42%;
+      bottom: -100px;
+      top: auto;
+      transform: translateX(50%);
+    }
+    .swiper-button-prev {
+      left: 42%;
+      bottom: -100px;
+      top: auto;
+      transform: translateX(-50%);
+    }
+  }
+}
+
+@media (max-width: 1180px) {
+  .about {
+    &__info-block {
+      &::before {
+        width: 700px;
+        height: 700px;
+      }
+    }
+    &__info-img-wrapper {
+      display: none;
+    }
+    &__info-title {
+      transform: translateY(0);
+      position: relative;
+      left: 0;
+      right: auto;
+      @include adaptive-value("margin-bottom", 30, 15, 1);
+    }
+    &__info-text-wrapper {
+      max-width: 100%;
+    }
+  }
+}
+
+@media (max-width: 1000px) {
+  .portfolio {
+    &__slide-inner {
+      flex-direction: column;
+      gap: 20px;
+      max-width: 500px;
+    }
+    &__slide-img-wrapper {
+      margin-right: 0;
+      flex: 1 0 auto;
+    }
+    &__slide-img {
+      max-height: 100%;
+      max-width: 100%;
+      max-height: 400px;
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .welcome {
+    padding-bottom: 30px;
+    &__img {
+      display: none;
+    }
+  }
+}
+
 @media (min-width: 801px) {
   .burger {
     display: none;
@@ -130,8 +253,8 @@
       left: 0;
       background-color: rgba(#000, 0.9);
       z-index: 1000;
-      width: 100%;
-      height: 100%;
+      width: 100vw;
+      height: 100vh;
       transform: translateX(100%);
       transition: transform 0.3s;
       &._open {
@@ -147,6 +270,93 @@
       &::before {
         display: none;
       }
+    }
+  }
+}
+
+@media (max-width: 700px) {
+  .about {
+    &__skills-item-img-wrapper {
+      transform: scale(0.8);
+    }
+  }
+  .footer {
+    &__inner {
+      flex-direction: column;
+      align-items: start;
+      gap: 35px;
+      align-items: center;
+    }
+    &__col {
+      min-width: 270px;
+      &:nth-child(3) {
+        flex: 1 0 auto;
+        margin: 0 auto;
+        text-align: center;
+      }
+    }
+    &__col-top {
+      margin-bottom: 10px;
+      gap: 10px;
+    }
+    &__col-btn {
+      transform: scale(0.8);
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .portfolio {
+    .swiper-button-next {
+      right: 34%;
+      transform: scale(0.9) translateX(50%);
+    }
+    .swiper-button-prev {
+      left: 34%;
+      transform: scale(0.9) translateX(-50%);
+    }
+  }
+}
+
+@media (max-width: 380px) {
+  .about {
+    &__skills-item {
+      @include adaptive-value("height", 270, 150, 1);
+    }
+    &__skills-item-img-wrapper {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-60%) scale(0.6);
+    }
+    &__skills-item-text {
+      position: absolute;
+      bottom: 20px;
+    }
+    &__skills-item {
+      position: relative;
+    }
+  }
+}
+
+@media (max-width: 366px) {
+  .about {
+    &__skills-item {
+      width: 100%;
+      flex: 1 0 auto;
+    }
+
+    &__skills-item-img-wrapper {
+      position: relative;
+      transform: scale(0.6);
+      top: 0;
+    }
+    &__skills-item-text {
+      position: relative;
+      bottom: 0;
+    }
+    &__skills-item {
+      position: relative;
+      height: 200px;
     }
   }
 }

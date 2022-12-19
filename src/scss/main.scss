@@ -33,11 +33,18 @@ body {
   padding: 0 15px;
 }
 
+html {
+  overflow-x: hidden;
+  &._fixed {
+    overflow: hidden;
+  }
+}
+
 // IM
 .im {
   &__header {
-    padding-top: 26px;
-    margin-bottom: 60px;
+    @include adaptive-value("padding-top", 26, 20, 1);
+    @include adaptive-value("padding-bottom", 60, 20, 1);
   }
   &__main {
   }
@@ -47,6 +54,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    overflow: hidden;
   }
   &__logo-wrapper {
     display: flex;
@@ -125,40 +133,43 @@ body {
   &__caption {
     font-family: "NEXT ART";
     font-weight: 600;
-    font-size: 48px;
+    @include adaptive-value("font-size", 48, 20, 1);
     line-height: calc(54 / 48);
     color: #e4e4e4;
-    margin-bottom: 27px;
+    @include adaptive-value("margin-bottom", 27, 15, 1);
     transition: transform 0.2s;
     display: block;
   }
   &__title {
     font-family: "NEXT ART";
     font-weight: 700;
-    font-size: 72px;
+    @include adaptive-value("font-size", 72, 30, 1);
     line-height: calc(82 / 72);
     color: #e4e4e4;
-    margin-bottom: 27px;
+    @include adaptive-value("margin-bottom", 27, 15, 1);
     transition: transform 0.2s;
   }
   &__text {
     font-weight: 300;
-    font-size: 18px;
+    @include adaptive-value("font-size", 18, 14, 1);
     line-height: calc(21 / 18);
     color: #e4e4e4;
-    margin-bottom: 27px;
+    @include adaptive-value("margin-bottom", 27, 15, 1);
     transition: transform 0.2s;
   }
   &__btn-link {
     font-family: "NEXT ART";
     font-weight: 700;
-    font-size: 18px;
+    @include adaptive-value("font-size", 18, 14, 1);
     line-height: calc(20 / 18);
     color: #000;
     background: linear-gradient(87.32deg, #6278ec 4.47%, #29eea7 95.53%);
     box-shadow: 0px 2px 13px rgba(64, 192, 195, 0.7);
     border-radius: 6px;
-    padding: 14px 40px;
+    @include adaptive-value("padding-top", 14, 12, 1);
+    @include adaptive-value("padding-bottom", 14, 12, 1);
+    @include adaptive-value("padding-left", 40, 30, 1);
+    @include adaptive-value("padding-right", 40, 30, 1);
     transition: all 0.2s;
   }
   &__img-wrapper {
@@ -181,24 +192,25 @@ body {
   &__skills-list {
     display: flex;
     justify-content: center;
-    column-gap: 40px;
-    row-gap: 40px;
+    @include adaptive-value("column-gap", 40, 10, 1);
+    @include adaptive-value("row-gap", 40, 10, 1);
     flex-wrap: wrap;
-    margin-bottom: 183px;
+    @include adaptive-value("margin-bottom", 183, 50, 1);
   }
   &__skills-item {
     flex: 0 0 270px;
+    @include adaptive-value("flex-basis", 270, 150, 1);
     background: #2a2a2a;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.47);
     border-radius: 29px;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 270px;
+    @include adaptive-value("height", 270, 160, 1);
     flex-direction: column;
     justify-content: space-between;
-    padding-bottom: 50px;
-    padding-top: 30px;
+    @include adaptive-value("padding-bottom", 50, 25, 1);
+    @include adaptive-value("padding-top", 30, 15, 1);
     transition: all 0.3s;
   }
   &__skills-item-img-wrapper {
@@ -209,7 +221,7 @@ body {
   }
   &__skills-item-text {
     font-weight: 300;
-    font-size: 24px;
+    @include adaptive-value("font-size", 24, 14, 1);
     line-height: calc(29 / 24);
     color: #e4e4e4;
   }
@@ -229,14 +241,14 @@ body {
   &__info-text-wrapper {
     position: relative;
     margin: 0 auto;
-    padding: 63px;
+    @include adaptive-value("padding", 63, 20, 1);
     border-radius: 14px;
     max-width: 496px;
     background: #2c2c2c;
   }
   &__info-text {
     font-weight: 300;
-    font-size: 20px;
+    @include adaptive-value("font-size", 20, 14, 1);
     line-height: calc(24 / 20);
     letter-spacing: 0.01em;
   }
@@ -297,7 +309,7 @@ body {
     transition: all 0.3s;
   }
   .swiper-button-next {
-    right: 350px;
+    right: 16%;
     &::after {
       position: absolute;
       top: 50%;
@@ -310,7 +322,7 @@ body {
     }
   }
   .swiper-button-prev {
-    left: 350px;
+    left: 16%;
     &::after {
       position: absolute;
       top: 50%;
@@ -323,7 +335,7 @@ body {
     }
   }
   &__title-wrapper {
-    margin-bottom: 50px;
+    @include adaptive-value("margin-bottom", 50, 20, 1);
   }
   &__title {
     position: relative;
@@ -340,8 +352,10 @@ body {
     }
   }
   &__slider {
+    overflow: visible;
   }
   &__swiper-wrapper {
+    position: relative;
   }
   &__slide {
   }
@@ -349,7 +363,7 @@ body {
     background: linear-gradient(130.68deg, #414141 0%, #2d2d2d 100.52%);
     box-shadow: 0px 4px 15px rgba(27, 27, 27, 0.28);
     border-radius: 29px;
-    padding: 50px;
+    @include adaptive-value("padding", 50, 20, 1);
     display: flex;
     align-items: center;
     max-width: 970px;
@@ -368,20 +382,20 @@ body {
   &__text-title {
     font-style: normal;
     font-weight: 300;
-    font-size: 24px;
+    @include adaptive-value("font-size", 24, 16, 1);
     line-height: calc(29 / 24);
-    margin-bottom: 25px;
+    @include adaptive-value("margin-bottom", 25, 10, 1);
   }
   &__text {
     font-weight: 300;
-    font-size: 18px;
+    @include adaptive-value("font-size", 18, 14, 1);
     line-height: calc(21 / 18);
-    margin-bottom: 25px;
+    @include adaptive-value("margin-bottom", 25, 10, 1);
     text-align: center;
   }
   &__text-link {
     font-weight: 300;
-    font-size: 18px;
+    @include adaptive-value("font-size", 18, 14, 1);
     line-height: calc(21 / 18);
     background: linear-gradient(180deg, #6278ec 0%, #29eea7 100%);
     -webkit-background-clip: text;
@@ -438,7 +452,7 @@ body {
   }
   &__item {
     font-weight: 300;
-    font-size: 18px;
+    @include adaptive-value("font-size", 18, 14, 1);
     line-height: calc(21 / 18);
     color: #e4e4e4;
   }
@@ -462,7 +476,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 70px;
+    @include adaptive-value("margin-bottom", 70, 40, 1);
   }
   &__col-logo-wrapper {
   }
@@ -470,7 +484,7 @@ body {
   }
   &__col-title {
     font-family: "Nico Moji";
-    font-size: 18px;
+    @include adaptive-value("font-size", 18, 14, 1);
     line-height: 1;
     text-align: center;
   }
@@ -491,7 +505,7 @@ body {
   }
   &__col-bottom-text {
     font-weight: 300;
-    font-size: 18px;
+    @include adaptive-value("font-size", 18, 14, 1);
     line-height: calc(21 / 18);
     align-items: center;
     color: #e4e4e4;
