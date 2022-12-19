@@ -1,1 +1,30 @@
 // Здесь находятся все глобальные стили проекта, например блоки по БЭМу
+.title-wrapper {
+  text-align: center;
+}
+.title {
+  display: inline-block;
+  font-family: "NEXT ART";
+  font-weight: 400;
+  font-size: 48px;
+  line-height: calc(54 / 48);
+  color: #e4e4e4;
+}
+
+// PAGE
+.page {
+  &__im {
+  }
+  &__about {
+    padding-top: 113px;
+    padding-bottom: 159px;
+  }
+  &__portfolio {
+    padding-top: 100px;
+    padding-bottom: 150px;
+  }
+  &__footer {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+}
